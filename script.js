@@ -231,3 +231,61 @@ for (let i = 0; i < 8; i++) {
             </div>`;
 }
 luoiDanhGia.innerHTML = html;
+
+// ===== MODAL PHÓNG TO ẢNH NGƯỜI ĐẠI DIỆN =====
+const khungHinhDaiDien = document.getElementById("khungHinhDaiDien");
+const modalAnhDaiDien = document.getElementById("modalAnhDaiDien");
+const dongModalAnh = document.getElementById("dongModalAnh");
+const nutTaiAnh = document.getElementById("nutTaiAnh");
+const anhPhongTo = document.getElementById("anhPhongTo");
+const anhDaiDien = document.getElementById("anhDaiDien");
+
+// Mở modal khi click vào ảnh
+if (khungHinhDaiDien) {
+  khungHinhDaiDien.addEventListener("click", function () {
+    modalAnhDaiDien.classList.add("hien");
+    document.body.style.overflow = "hidden";
+  });
+}
+
+// Đóng modal khi click vào nút X
+if (dongModalAnh) {
+  dongModalAnh.addEventListener("click", function () {
+    modalAnhDaiDien.classList.remove("hien");
+    document.body.style.overflow = "";
+  });
+}
+
+// Đóng modal khi click ra ngoài
+if (modalAnhDaiDien) {
+  modalAnhDaiDien.addEventListener("click", function (e) {
+    if (e.target === modalAnhDaiDien) {
+      modalAnhDaiDien.classList.remove("hien");
+      document.body.style.overflow = "";
+    }
+  });
+}
+
+// Đóng modal bằng phím ESC
+document.addEventListener("keydown", function (e) {
+  if (
+    e.key === "Escape" &&
+    modalAnhDaiDien &&
+    modalAnhDaiDien.classList.contains("hien")
+  ) {
+    modalAnhDaiDien.classList.remove("hien");
+    document.body.style.overflow = "";
+  }
+});
+
+// Chức năng tải ảnh xuống
+if (nutTaiAnh) {
+  nutTaiAnh.addEventListener("click", function () {
+    const link = document.createElement("a");
+    link.href = anhDaiDien ? anhDaiDien.src : "./detq.jpg";
+    link.download = "detq.jpg";
+    document.body.appendChild(link);
+    link.click();
+    document.body.removeChild(link);
+  });
+}
