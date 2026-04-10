@@ -49,7 +49,7 @@ const duLieuSanPham = {
     video: "https://www.youtube.com/embed/dQw4w9WgXcQ",
     moTa: "Gạo lứt rang vàng thơm lừng, kết hợp đông trùng hạ thảo giàu cordycepin. Hương vị bùi béo, thanh mát, hỗ trợ tiêu hóa, bổ thận tráng dương, giảm mệt mỏi.",
     cachPha:
-      "Hãm 3-5g với 200ml nước sôi (85-90°C) trong 5-7 phút. Uống ấm sau bữa ăn.",
+      "Ngâm 1 túi trà từ 15' với 500-700ml nước 90-100°C hoặc nước đun sôi trên bếp và sử dụng.",
     thanhPhan: [
       { ten: "Gạo lứt", anh: "./gaolut.jpg" },
       { ten: "Đông trùng", anh: "./namdongtrung.jpg" },
@@ -76,7 +76,7 @@ const duLieuSanPham = {
     video: "https://www.youtube.com/embed/dQw4w9WgXcQ",
     moTa: "Sự kết hợp tinh tế giữa hoa lạc tiên tím biếc và tâm sen trắng ngần. Giúp giảm lo âu, ngủ sâu giấc, điều hòa nhịp tim.",
     cachPha:
-      "Hãm 2-3g trà với 250ml nước 85°C trong 5 phút, uống trước khi ngủ 30 phút.",
+      "Ngâm 1 túi trà trong 10' với 250ml nước 90°C. Uống trước khi ngủ để có hiệu quả tốt nhất.",
     thanhPhan: [
       { ten: "Lạc tiên", anh: "./hoalactien.jpg" },
       { ten: "Tâm sen", anh: "./tamsen.jpg" },
@@ -101,7 +101,7 @@ const duLieuSanPham = {
     anh: "./lá ôi.jpg",
     video: "https://www.youtube.com/embed/dQw4w9WgXcQ",
     moTa: "Lá ổi non được hái thủ công, sấy khô giữ trọn tinh chất. Vị chát nhẹ, hậu ngọt thanh. Hỗ trợ kiểm soát đường huyết.",
-    cachPha: "Đun 3g lá ổi với 300ml nước sôi trong 5 phút hoặc hãm 7-10 phút.",
+    cachPha: "Ngâm 1 túi trà trong 10' với 250ml nước 90°C.",
     thanhPhan: [{ ten: "Lá ổi", anh: "./laoi.webp" }],
     danhGia: [
       {
@@ -124,7 +124,7 @@ const duLieuSanPham = {
     anh: "./gai leo.jpg",
     video: "https://www.youtube.com/embed/dQw4w9WgXcQ",
     moTa: "Cà gai leo – thảo dược quý cho người bệnh gan, men gan cao. Vị đắng dịu, hậu ngọt. Hỗ trợ bảo vệ tế bào gan.",
-    cachPha: "Hãm 5-7g với 250ml nước sôi trong 10 phút, uống 2-3 lần/ngày.",
+    cachPha: "Ngâm 1 túi trà trong 10' với 250ml nước 90°C.",
     thanhPhan: [{ ten: "Cà gai", anh: "./cagaileo.jpg" }],
     danhGia: [
       {
