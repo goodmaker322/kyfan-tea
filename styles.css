@@ -1452,7 +1452,7 @@ body {
     }
 }
 
-/* ===== PHẦN HÌNH ẢNH NGƯỜI ĐẠI DIỆN (CẬP NHẬT CÓ OVERLAY) ===== */
+/* ===== PHẦN HÌNH ẢNH NGƯỜI ĐẠI DIỆN (ĐÃ SỬA - KHÔNG MỜ TRÊN MOBILE) ===== */
 .cau-chuyen-hinh-anh {
     margin: 3rem 0;
     display: flex;
@@ -1479,6 +1479,9 @@ body {
     box-shadow: 0 20px 40px rgba(0, 20, 0, 0.15);
     transition: all 0.4s ease;
     display: block;
+    /* Đảm bảo ảnh luôn rõ nét */
+    opacity: 1;
+    filter: none;
 }
 
 /* Overlay khi hover vào ảnh */
@@ -1499,14 +1502,42 @@ body {
     opacity: 0;
     transition: all 0.3s ease;
     color: white;
+    pointer-events: none;
+    /* Cho phép click xuyên qua overlay */
 }
 
-.khung-hinh-dai-dien:hover .overlay-phong-to {
-    opacity: 1;
+/* CHỈ hiển thị overlay khi hover trên DESKTOP */
+@media (min-width: 769px) {
+    .khung-hinh-dai-dien:hover .overlay-phong-to {
+        opacity: 1;
+    }
+
+    .khung-hinh-dai-dien:hover img {
+        border-radius: 50px 15px 50px 15px;
+    }
+
+    .khung-hinh-dai-dien:hover .hieu-ung-khung {
+        border-radius: 20px 55px 20px 55px;
+        opacity: 0.6;
+    }
 }
 
-.khung-hinh-dai-dien:hover img {
-    border-radius: 50px 15px 50px 15px;
+/* TRÊN MOBILE: ẨN OVERLAY, ẢNH LUÔN RÕ NÉT */
+@media (max-width: 768px) {
+    .overlay-phong-to {
+        display: none;
+        /* Ẩn hoàn toàn overlay trên mobile */
+    }
+
+    .khung-hinh-dai-dien img {
+        opacity: 1;
+        filter: brightness(1);
+    }
+
+    /* Hiệu ứng chạm nhẹ khi click trên mobile */
+    .khung-hinh-dai-dien:active img {
+        transform: scale(0.98);
+    }
 }
 
 .icon-phong-to {
@@ -1534,11 +1565,6 @@ body {
     opacity: 0.4;
     pointer-events: none;
     transition: all 0.4s ease;
-}
-
-.khung-hinh-dai-dien:hover .hieu-ung-khung {
-    border-radius: 20px 55px 20px 55px;
-    opacity: 0.6;
 }
 
 .thong-tin-dai-dien {
@@ -1574,12 +1600,12 @@ body {
     left: 0;
     width: 100%;
     height: 100%;
-    background: rgba(5, 15, 5, 0);
+    background: rgba(5, 15, 5, 0.96);
     backdrop-filter: blur(15px);
     z-index: 2500;
     align-items: center;
     justify-content: center;
-    padding-top: 6rem;
+    padding: 1.5rem;
     animation: hienDan 0.3s ease-out;
 }
 
@@ -1710,6 +1736,7 @@ body {
 
     .cau-chuyen-hinh-anh {
         order: -1;
+        margin: 1.5rem 0;
     }
 
     .khung-hinh-dai-dien {
@@ -1737,9 +1764,9 @@ body {
         font-size: 0.75rem;
     }
 
+    /* Đã sửa: Bỏ opacity và background mờ trên mobile */
     .overlay-phong-to {
-        opacity: 1;
-        background: rgba(10, 26, 16, 0.4);
+        display: none;
     }
 
     .icon-phong-to {

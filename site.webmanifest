@@ -1,0 +1,21 @@
+{
+    "name": "KYFAN - Trà Thảo Mộc Dưỡng Sinh",
+    "short_name": "KYFAN",
+    "description": "Trà thảo mộc dưỡng sinh cao cấp từ thiên nhiên Việt Nam",
+    "icons": [
+        {
+            "src": "logo-kyfantea.png",
+            "sizes": "192x192",
+            "type": "image/png"
+        },
+        {
+            "src": "logo-kyfantea.png",
+            "sizes": "512x512",
+            "type": "image/png"
+        }
+    ],
+    "theme_color": "#0a1a10",
+    "background_color": "#f5f0e8",
+    "display": "standalone",
+    "start_url": "/"
+}
