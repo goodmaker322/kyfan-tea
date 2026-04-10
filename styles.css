@@ -246,22 +246,42 @@ body {
 }
 
 /* ===== KHU VỰC ANH HÙNG ===== */
+/* ===== KHU VỰC ANH HÙNG VỚI BACKGROUND ẢNH ===== */
 .khu-vuc-anh-hung {
     padding: 5rem 3rem;
-    background: linear-gradient(135deg, #0a1a10 0%, #0f2418 40%, #163a22 100%);
+    /* Thay background gradient bằng hình ảnh */
+    background: url('./bg-ah.jpg') center center / cover no-repeat;
+    background-color: #0a1a10;
+    /* Màu dự phòng khi ảnh chưa tải */
     position: relative;
     overflow: hidden;
+    isolation: isolate;
+    /* Tạo stacking context mới */
 }
 
+/* Lớp overlay tối phía trên ảnh để text dễ đọc */
+.khu-vuc-anh-hung::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(135deg, rgba(35, 73, 80, 0.85) 0%, rgba(28, 67, 77, 0.75) 40%, rgba(32, 68, 97, 0.7) 100%);
+    z-index: 1;
+}
+
+/* Họa tiết trang trí ✦ */
 .khu-vuc-anh-hung::after {
     content: "✦";
     font-size: 20rem;
     position: absolute;
     bottom: -60px;
     right: -30px;
-    opacity: 0.04;
+    opacity: 0.06;
     color: var(--mau-vang);
     font-family: serif;
+    z-index: 2;
 }
 
 .noi-dung-anh-hung {
@@ -292,6 +312,8 @@ body {
     line-height: 1.15;
     color: var(--mau-trang);
     margin-bottom: 1rem;
+    text-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
+    /* Thêm bóng chữ để dễ đọc hơn */
 }
 
 .tieu-de-anh-hung em {
@@ -300,6 +322,7 @@ body {
     color: var(--mau-vang);
     display: block;
     font-size: clamp(2.2rem, 6vw, 3.8rem);
+    text-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
 }
 
 .mo-ta-anh-hung {
@@ -308,6 +331,7 @@ body {
     color: #d8e4d4;
     margin-bottom: 2rem;
     max-width: 550px;
+    text-shadow: 0 2px 10px rgba(0, 0, 0, 0.3);
 }
 
 .nut-anh-hung {
@@ -322,11 +346,106 @@ body {
     text-transform: uppercase;
     cursor: pointer;
     transition: all 0.4s ease;
+    backdrop-filter: blur(5px);
+    /* Làm mờ nhẹ phía sau nút */
 }
 
 .nut-anh-hung:hover {
     background: var(--mau-vang);
     color: var(--mau-xanh-dam);
+}
+
+/* ===== RESPONSIVE CHO MOBILE ===== */
+@media (max-width: 992px) {
+    .khu-vuc-anh-hung {
+        padding: 4rem 2rem;
+        background-position: 65% center;
+        /* Điều chỉnh vị trí ảnh trên tablet */
+    }
+}
+
+@media (max-width: 768px) {
+    .khu-vuc-anh-hung {
+        padding: 3.5rem 1.5rem;
+        background-position: 70% center;
+        /* Điều chỉnh vị trí ảnh trên mobile */
+        background-attachment: scroll;
+        /* Tắt fixed background trên mobile */
+        text-align: center;
+    }
+
+    .khu-vuc-anh-hung::before {
+        background: linear-gradient(135deg, rgba(10, 26, 16, 0.9) 0%, rgba(15, 36, 24, 0.85) 100%);
+    }
+
+    .khu-vuc-anh-hung::after {
+        font-size: 12rem;
+        bottom: -30px;
+        right: -20px;
+    }
+
+    .noi-dung-anh-hung {
+        margin: 0 auto;
+    }
+
+    .huy-hieu-anh-hung {
+        padding: 6px 16px;
+        font-size: 0.65rem;
+        letter-spacing: 2px;
+    }
+
+    .tieu-de-anh-hung {
+        font-size: clamp(2.5rem, 10vw, 4rem);
+    }
+
+    .tieu-de-anh-hung em {
+        font-size: clamp(2rem, 8vw, 3rem);
+    }
+
+    .mo-ta-anh-hung {
+        margin-left: auto;
+        margin-right: auto;
+        font-size: clamp(0.95rem, 4vw, 1.1rem);
+    }
+
+    .nut-anh-hung {
+        padding: 10px 28px;
+        font-size: 0.8rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .khu-vuc-anh-hung {
+        padding: 2.5rem 1rem;
+        background-position: 75% center;
+    }
+
+    .khu-vuc-anh-hung::after {
+        font-size: 8rem;
+        bottom: -20px;
+        right: -10px;
+    }
+
+    .tieu-de-anh-hung {
+        font-size: clamp(2.2rem, 8vw, 3.5rem);
+    }
+
+    .tieu-de-anh-hung em {
+        font-size: clamp(1.8rem, 6vw, 2.5rem);
+    }
+
+    .mo-ta-anh-hung {
+        font-size: 0.9rem;
+        margin-bottom: 1.5rem;
+    }
+
+    .nut-anh-hung {
+        padding: 10px 20px;
+        font-size: 0.75rem;
+        width: 100%;
+        /* Nút full width trên mobile nhỏ */
+        max-width: 280px;
+    }
 }
 
 /* ===== CÂU CHUYỆN THƯƠNG HIỆU ===== */
