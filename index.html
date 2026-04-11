@@ -1,33 +1,23 @@
 <!DOCTYPE html>
 <html lang="vi">
-
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport"
-        content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=yes, viewport-fit=cover">
-
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=yes, viewport-fit=cover">
+    
     <!-- FAVICON -->
     <link rel="icon" type="image/png" sizes="32x32" href="./favicon_io/favicon-32x32.png">
     <link rel="icon" type="image/png" sizes="16x16" href="./favicon_io/favicon-16x16.png">
     <link rel="apple-touch-icon" sizes="180x180" href="./favicon_io/android-chrome-192x192.png">
     <link rel="shortcut icon" href="./favicon_io/favicon.ico">
-
-    <!-- Web App Manifest -->
     <link rel="manifest" href="./favicon_io/site.webmanifest">
-
-    <!-- Theme color -->
+    
     <meta name="theme-color" content="#0a1a10">
     <meta name="msapplication-TileColor" content="#0a1a10">
-
-    <!-- SEO Meta -->
-    <meta name="description"
-        content="KYFAN - Trà thảo mộc dưỡng sinh cao cấp, thanh lọc cơ thể, bồi bổ sức khỏe từ thiên nhiên Việt Nam.">
-    <meta name="keywords"
-        content="trà thảo mộc, dưỡng sinh, gạo lứt đông trùng, lạc tiên tâm sen, trà lá ổi, cà gai leo, KYFAN">
+    <meta name="description" content="KYFAN - Trà thảo mộc dưỡng sinh cao cấp, thanh lọc cơ thể, bồi bổ sức khỏe từ thiên nhiên Việt Nam.">
+    <meta name="keywords" content="trà thảo mộc, dưỡng sinh, gạo lứt đông trùng, lạc tiên tâm sen, trà lá ổi, cà gai leo, KYFAN">
     <meta name="author" content="KYFAN Store">
     <meta name="robots" content="index, follow">
-
-    <!-- Open Graph -->
+    
     <meta property="og:title" content="KYFAN | Thanh Lọc - Dưỡng Sinh">
     <meta property="og:description" content="Trà thảo mộc dưỡng sinh cao cấp từ thiên nhiên Việt Nam">
     <meta property="og:image" content="https://kyfan.com/logo-kyfantea.png">
@@ -35,31 +25,31 @@
     <meta property="og:type" content="website">
     <meta property="og:site_name" content="KYFAN Store">
     <meta property="og:locale" content="vi_VN">
-
-    <!-- Twitter Card -->
+    
     <meta name="twitter:card" content="summary_large_image">
     <meta name="twitter:title" content="KYFAN | Thanh Lọc - Dưỡng Sinh">
     <meta name="twitter:description" content="Trà thảo mộc dưỡng sinh cao cấp từ thiên nhiên Việt Nam">
     <meta name="twitter:image" content="https://kyfan.com/logo-kyfantea.png">
-
+    
     <title>KYFAN | Thanh Lọc - Dưỡng Sinh</title>
-
+    
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link
-        href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500&family=Montserrat:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800&display=swap"
-        rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500&family=Montserrat:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css">
     <link rel="stylesheet" href="styles.css">
 </head>
-
 <body>
+    <!-- TOAST NOTIFICATION -->
+    <div class="toast-container" id="toastContainer"></div>
+    
+    <!-- LOADER -->
     <div class="man-hinh-tai" id="manHinhTai">
         <div class="vong-tai"></div>
     </div>
 
     <div class="trang-boc">
-        <!-- ĐẦU TRANG VỚI MINI MENU MOBILE -->
+        <!-- HEADER -->
         <header class="dau-trang">
             <div class="khu-vuc-logo">
                 <img class="anh-logo" src="logo-kyfantea.png" alt="KYFAN">
@@ -69,7 +59,6 @@
                 </div>
             </div>
 
-            <!-- Nút 3 gạch cho mobile -->
             <button class="nut-menu-mobile" id="nutMenuMobile" aria-label="Menu">
                 <span></span>
                 <span></span>
@@ -84,49 +73,38 @@
                 <a href="#danh-gia">Đánh Giá</a>
                 <a href="#lien-he">Liên Hệ</a>
             </nav>
+
+            <!-- Giỏ hàng icon -->
+            <div class="gio-hang-icon" id="gioHangIcon">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor">
+                    <path d="M7 18c-1.1 0-1.99.9-1.99 2S5.9 22 7 22s2-.9 2-2-.9-2-2-2zM1 2v2h2l3.6 7.59-1.35 2.45c-.16.28-.25.61-.25.96 0 1.1.9 2 2 2h12v-2H7.42c-.14 0-.25-.11-.25-.25l.03-.12.9-1.63h7.45c.75 0 1.41-.41 1.75-1.03l3.58-6.49c.08-.14.12-.31.12-.48 0-.55-.45-1-1-1H5.21l-.94-2H1zm16 16c-1.1 0-1.99.9-1.99 2s.89 2 1.99 2 2-.9 2-2-.9-2-2-2z"/>
+                </svg>
+                <span class="gio-hang-dem" id="gioHangDem">0</span>
+            </div>
         </header>
 
-        <!-- Overlay cho mobile menu -->
         <div class="menu-overlay-mobile" id="menuOverlayMobile"></div>
 
-        <!-- KHU VỰC ANH HÙNG -->
+        <!-- HERO SECTION -->
         <section class="khu-vuc-anh-hung">
             <div class="noi-dung-anh-hung">
                 <div class="huy-hieu-anh-hung">✦ Tinh Hoa Thảo Mộc Việt ✦</div>
                 <h1 class="tieu-de-anh-hung">Nghệ Thuật<br><em>Dưỡng Sinh</em></h1>
-                <p class="mo-ta-anh-hung">Mỗi tách trà là một hành trình trở về với thiên nhiên thuần khiết, nơi thân an
-                    - tâm sáng.</p>
-                <button class="nut-anh-hung"
-                    onclick="document.getElementById('gao-lut').scrollIntoView({behavior:'smooth'})">Khám Phá Bộ Sưu
-                    Tập</button>
+                <p class="mo-ta-anh-hung">Mỗi tách trà là một hành trình trở về với thiên nhiên thuần khiết, nơi thân an - tâm sáng.</p>
+                <button class="nut-anh-hung" onclick="document.getElementById('gao-lut').scrollIntoView({behavior:'smooth'})">Khám Phá Bộ Sưu Tập</button>
             </div>
         </section>
 
         <!-- CÂU CHUYỆN THƯƠNG HIỆU -->
         <section class="cau-chuyen" data-aos="fade-up">
             <div class="cau-chuyen-container">
-                <!-- Phần nội dung bên trái -->
                 <div class="cau-chuyen-noi-dung">
                     <div class="tieu-de-cau-chuyen">Trà từ <i>Tâm</i></div>
-                    <div class="phu-de-cau-chuyen">"Uống trà không chỉ là thưởng thức, mà là kết nối tâm hồn với đất
-                        trời và tôn
-                        vinh thảo mộc Việt"</div>
-                    <p class="van-ban-cau-chuyen">Chúng tôi, những người trẻ yêu trà, đã dành trọn tâm huyết để tìm kiếm
-                        những
-                        thảo mộc sạch nhất, thuần khiết nhất. Mỗi nhành thảo mộc, từng cánh hoa và mọi nguyên liệu đều
-                        được chọn
-                        lọc bằng cả trái tim. <strong>"Làm trà là làm dưỡng sinh cho đời"</strong> – chúng tôi tin rằng
-                        một tách
-                        trà ngon không chỉ bồi bổ thân thể mà còn nuôi dưỡng cả tâm hồn người yêu trà.</p>
-                    <p class="van-ban-cau-chuyen" style="margin-top:1rem;"><strong>KYFAN</strong> không chỉ đơn thuần
-                        bán trà,
-                        mà là gửi gắm thông điệp sống chậm, sống khỏe từ bên trong nhờ vào các tinh túy của Mẹ thiên
-                        nhiên ban
-                        cho từng "Cây cỏ nước Nam".</p>
+                    <div class="phu-de-cau-chuyen">"Uống trà không chỉ là thưởng thức, mà là kết nối tâm hồn với đất trời và tôn vinh thảo mộc Việt"</div>
+                    <p class="van-ban-cau-chuyen">Chúng tôi, những người trẻ yêu trà, đã dành trọn tâm huyết để tìm kiếm những thảo mộc sạch nhất, thuần khiết nhất. Mỗi nhành thảo mộc, từng cánh hoa và mọi nguyên liệu đều được chọn lọc bằng cả trái tim. <strong>"Làm trà là làm dưỡng sinh cho đời"</strong> – chúng tôi tin rằng một tách trà ngon không chỉ bồi bổ thân thể mà còn nuôi dưỡng cả tâm hồn người yêu trà.</p>
+                    <p class="van-ban-cau-chuyen" style="margin-top:1rem;"><strong>KYFAN</strong> không chỉ đơn thuần bán trà, mà là gửi gắm thông điệp sống chậm, sống khỏe từ bên trong nhờ vào các tinh túy của Mẹ thiên nhiên ban cho từng "Cây cỏ nước Nam".</p>
                     <div class="chu-ky">~ KYFAN Trà Thảo Mộc Dưỡng cho Thân An - Dưỡng cho Tâm Sáng ~</div>
                 </div>
-
-                <!-- Phần hình ảnh người đại diện bên phải -->
                 <div class="cau-chuyen-hinh-anh">
                     <div class="khung-hinh-dai-dien" id="khungHinhDaiDien">
                         <img src="./detq.jpg" alt="Người đại diện thương hiệu KYFAN" id="anhDaiDien">
@@ -144,7 +122,7 @@
             </div>
         </section>
 
-        <!-- MODAL PHÓNG TO ẢNH NGƯỜI ĐẠI DIỆN -->
+        <!-- MODAL PHÓNG TO ẢNH -->
         <div class="modal-anh-dai-dien" id="modalAnhDaiDien">
             <div class="modal-anh-noi-dung">
                 <span class="modal-anh-dong" id="dongModalAnh">&times;</span>
@@ -170,16 +148,14 @@
                 <div class="khu-vuc-anh">
                     <div class="khung-anh-san-pham">
                         <img class="anh-san-pham-chinh" src="gạp lứt đông trung.jpg" alt="Gạo Lứt Đông Trùng">
-                        <div class="huy-hieu-noi" style="color: var(--mau-gao-lut); border-color: var(--mau-gao-lut);">✦
-                            Cải thiện sức khỏe</div>
+                        <div class="huy-hieu-noi" style="color: var(--mau-gao-lut); border-color: var(--mau-gao-lut);">✦ Cải thiện sức khỏe</div>
                     </div>
                 </div>
                 <div class="khu-vuc-thong-tin">
                     <span class="the-san-pham">Bồi Bổ Nguyên Khí</span>
                     <h2 class="ten-san-pham">Gạo Lứt<br>Đông Trùng</h2>
                     <div class="ten-phu-san-pham">Đông Trùng & Gạo Lứt Hữu Cơ</div>
-                    <p class="mo-ta-san-pham">Gạo lứt rang vàng thơm lừng, kết hợp đông trùng hạ thảo giàu cordycepin.
-                        Hương vị bùi béo, thanh mát, hỗ trợ tiêu hóa, bổ thận tráng dương, giảm mệt mỏi.</p>
+                    <p class="mo-ta-san-pham">Gạo lứt rang vàng thơm lừng, kết hợp đông trùng hạ thảo giàu cordycepin. Hương vị bùi béo, thanh mát, hỗ trợ tiêu hóa, bổ thận tráng dương, giảm mệt mỏi.</p>
                     <div class="thanh-phan">
                         <div class="thanh-phan-item"><img src="gaolut.jpg"><span>Gạo Lứt</span></div>
                         <div class="thanh-phan-item"><img src="namdongtrung.jpg"><span>Đông Trùng</span></div>
@@ -188,7 +164,12 @@
                         <span class="gia-hien-tai">129.000₫</span>
                         <span class="don-vi-gia">/ Hộp 25 túi lọc</span>
                     </div>
-                    <button class="nut-chi-tiet" data-san-pham="gao-lut">Khám Phá Chi Tiết</button>
+                    <div class="nut-san-pham-group">
+                        <button class="nut-chi-tiet" data-san-pham="gao-lut">Chi Tiết</button>
+                        <button class="nut-them-gio" data-id="sp1" data-ten="Gạo Lứt Đông Trùng" data-gia="129000" data-anh="gạp lứt đông trung.jpg">
+                            <span>🛒</span> Thêm vào giỏ
+                        </button>
+                    </div>
                 </div>
             </div>
         </section>
@@ -199,16 +180,14 @@
                 <div class="khu-vuc-anh">
                     <div class="khung-anh-san-pham">
                         <img class="anh-san-pham-chinh" src="lạc tâm sen.jpg" alt="Lạc Tiên Tâm Sen">
-                        <div class="huy-hieu-noi"
-                            style="color: var(--mau-lac-tien); border-color: var(--mau-lac-tien);">✦ Thư thái</div>
+                        <div class="huy-hieu-noi" style="color: var(--mau-lac-tien); border-color: var(--mau-lac-tien);">✦ Thư thái</div>
                     </div>
                 </div>
                 <div class="khu-vuc-thong-tin">
                     <span class="the-san-pham">An Thần · Dịu Giấc</span>
                     <h2 class="ten-san-pham">Lạc Tiên<br>Tâm Sen</h2>
                     <div class="ten-phu-san-pham">Hoa Lạc Tiên & Tâm Sen</div>
-                    <p class="mo-ta-san-pham">Sự kết hợp tinh tế giữa hoa lạc tiên tím biếc và tâm sen trắng ngần. Giúp
-                        giảm lo âu, ngủ sâu giấc, điều hòa nhịp tim, hương thơm nhẹ nhàng thanh khiết.</p>
+                    <p class="mo-ta-san-pham">Sự kết hợp tinh tế giữa hoa lạc tiên tím biếc và tâm sen trắng ngần. Giúp giảm lo âu, ngủ sâu giấc, điều hòa nhịp tim, hương thơm nhẹ nhàng thanh khiết.</p>
                     <div class="thanh-phan">
                         <div class="thanh-phan-item"><img src="hoalactien.jpg"><span>Lạc Tiên</span></div>
                         <div class="thanh-phan-item"><img src="tamsen.jpg"><span>Tâm Sen</span></div>
@@ -217,7 +196,12 @@
                         <span class="gia-hien-tai">109.000₫</span>
                         <span class="don-vi-gia">/ Hộp 60 túi lọc</span>
                     </div>
-                    <button class="nut-chi-tiet" data-san-pham="lac-tien">Khám Phá Chi Tiết</button>
+                    <div class="nut-san-pham-group">
+                        <button class="nut-chi-tiet" data-san-pham="lac-tien">Chi Tiết</button>
+                        <button class="nut-them-gio" data-id="sp2" data-ten="Lạc Tiên Tâm Sen" data-gia="109000" data-anh="lạc tâm sen.jpg">
+                            <span>🛒</span> Thêm vào giỏ
+                        </button>
+                    </div>
                 </div>
             </div>
         </section>
@@ -228,16 +212,14 @@
                 <div class="khu-vuc-anh">
                     <div class="khung-anh-san-pham">
                         <img class="anh-san-pham-chinh" src="lá ôi.jpg" alt="Trà Lá Ổi">
-                        <div class="huy-hieu-noi" style="color: var(--mau-la-oi); border-color: var(--mau-la-oi);">✦
-                            Thanh Khiết</div>
+                        <div class="huy-hieu-noi" style="color: var(--mau-la-oi); border-color: var(--mau-la-oi);">✦ Thanh Khiết</div>
                     </div>
                 </div>
                 <div class="khu-vuc-thong-tin">
                     <span class="the-san-pham">Hỗ Trợ Đường Huyết</span>
                     <h2 class="ten-san-pham">Trà Lá Ổi</h2>
                     <div class="ten-phu-san-pham">Lá Ổi Non · Sấy Khô Tự Nhiên</div>
-                    <p class="mo-ta-san-pham">Lá ổi non được hái thủ công, sấy khô giữ trọn tinh chất. Vị chát nhẹ, hậu
-                        ngọt thanh. Hỗ trợ kiểm soát đường huyết, giảm viêm nhiễm, tốt cho hệ tiêu hóa.</p>
+                    <p class="mo-ta-san-pham">Lá ổi non được hái thủ công, sấy khô giữ trọn tinh chất. Vị chát nhẹ, hậu ngọt thanh. Hỗ trợ kiểm soát đường huyết, giảm viêm nhiễm, tốt cho hệ tiêu hóa.</p>
                     <div class="thanh-phan">
                         <div class="thanh-phan-item"><img src="laoi.webp"><span>Lá Ổi</span></div>
                     </div>
@@ -245,7 +227,12 @@
                         <span class="gia-hien-tai">99.000₫</span>
                         <span class="don-vi-gia">/ Hộp 60 túi lọc</span>
                     </div>
-                    <button class="nut-chi-tiet" data-san-pham="la-oi">Khám Phá Chi Tiết</button>
+                    <div class="nut-san-pham-group">
+                        <button class="nut-chi-tiet" data-san-pham="la-oi">Chi Tiết</button>
+                        <button class="nut-them-gio" data-id="sp3" data-ten="Trà Lá Ổi" data-gia="99000" data-anh="lá ôi.jpg">
+                            <span>🛒</span> Thêm vào giỏ
+                        </button>
+                    </div>
                 </div>
             </div>
         </section>
@@ -256,16 +243,14 @@
                 <div class="khu-vuc-anh">
                     <div class="khung-anh-san-pham">
                         <img class="anh-san-pham-chinh" src="gai leo.jpg" alt="Cà Gai Leo">
-                        <div class="huy-hieu-noi" style="color: var(--mau-ca-gai); border-color: var(--mau-ca-gai);">✦
-                            Thải Độc</div>
+                        <div class="huy-hieu-noi" style="color: var(--mau-ca-gai); border-color: var(--mau-ca-gai);">✦ Thải Độc</div>
                     </div>
                 </div>
                 <div class="khu-vuc-thong-tin">
                     <span class="the-san-pham">Giải Độc Gan</span>
                     <h2 class="ten-san-pham">Cà Gai Leo</h2>
                     <div class="ten-phu-san-pham">Thảo Dược Quý · Hạ Men Gan</div>
-                    <p class="mo-ta-san-pham">Cà gai leo – thảo dược quý cho người bệnh gan, men gan cao. Vị đắng dịu,
-                        hậu ngọt. Hỗ trợ bảo vệ tế bào gan, giải độc, mát gan, lợi mật.</p>
+                    <p class="mo-ta-san-pham">Cà gai leo – thảo dược quý cho người bệnh gan, men gan cao. Vị đắng dịu, hậu ngọt. Hỗ trợ bảo vệ tế bào gan, giải độc, mát gan, lợi mật.</p>
                     <div class="thanh-phan">
                         <div class="thanh-phan-item"><img src="cagaileo.jpg"><span>Cà Gai</span></div>
                     </div>
@@ -273,7 +258,12 @@
                         <span class="gia-hien-tai">109.000₫</span>
                         <span class="don-vi-gia">/ Hộp 60 túi lọc</span>
                     </div>
-                    <button class="nut-chi-tiet" data-san-pham="ca-gai">Khám Phá Chi Tiết</button>
+                    <div class="nut-san-pham-group">
+                        <button class="nut-chi-tiet" data-san-pham="ca-gai">Chi Tiết</button>
+                        <button class="nut-them-gio" data-id="sp4" data-ten="Cà Gai Leo" data-gia="109000" data-anh="gai leo.jpg">
+                            <span>🛒</span> Thêm vào giỏ
+                        </button>
+                    </div>
                 </div>
             </div>
         </section>
@@ -286,12 +276,9 @@
                         <div class="sao-vang">★★★★★</div>
                         <div class="so-diem">4.96</div>
                     </div>
-                    <div class="tong-danh-gia">✦ Dựa trên <strong style="color: var(--mau-vang);">4.289</strong> đánh
-                        giá từ khách hàng</div>
+                    <div class="tong-danh-gia">✦ Dựa trên <strong style="color: var(--mau-vang);">4.289</strong> đánh giá từ khách hàng</div>
                 </div>
-                <button class="nut-anh-hung"
-                    style="background: transparent; color: var(--mau-vang); border-color: var(--mau-vang);"
-                    onclick="alert('Cảm ơn bạn đã tin tưởng KYFAN!')">Chia Sẻ Cảm Nhận</button>
+                <button class="nut-anh-hung" style="background: transparent; color: var(--mau-vang); border-color: var(--mau-vang);" onclick="alert('Cảm ơn bạn đã tin tưởng KYFAN!')">Chia Sẻ Cảm Nhận</button>
             </div>
             <div class="luoi-danh-gia" id="luoiDanhGia"></div>
         </section>
@@ -300,9 +287,7 @@
         <section id="lien-he" class="ban-do" data-aos="fade-up">
             <h2 class="tieu-de-ban-do">✦ Ghé Thăm Chúng Tôi</h2>
             <div class="khung-ban-do">
-                <iframe
-                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3723.897845092335!2d105.79100307489734!3d20.98675298064895!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3135acc7aeb49133%3A0x84f72ac6dd70935b!2zMjk0IMSQLiBOZ3V54buFbiBUcsOjaSwgUGjGsOG7nW5nIMSQ4bqhaSBN4buXLCBIw6AgTuG7mWk!5e0!3m2!1svi!2s!4v1715000000000"
-                    allowfullscreen="" loading="lazy"></iframe>
+                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3723.897845092335!2d105.79100307489734!3d20.98675298064895!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3135acc7aeb49133%3A0x84f72ac6dd70935b!2zMjk0IMSQLiBOZ3V54buFbiBUcsOjaSwgUGjGsOG7nW5nIMSQ4bqhaSBN4buXLCBIw6AgTuG7mWk!5e0!3m2!1svi!2s!4v1715000000000" allowfullscreen="" loading="lazy"></iframe>
             </div>
             <div class="thong-tin-lien-he">
                 <span>📍 294 Đường Nguyễn Trãi, Phường Đại Mỗ, Thành Phố Hà Nội</span>
@@ -336,78 +321,283 @@
                 </div>
                 <div class="cot-chan-trang">
                     <h4>Kết Nối</h4>
-                    <a href="https://www.facebook.com/tran.e.930413" target="_blank" rel="noopener noreferrer"
-                        class="link-mang-xa-hoi link-facebook">
+                    <a href="https://www.facebook.com/tran.e.930413" target="_blank" rel="noopener noreferrer" class="link-mang-xa-hoi link-facebook">
                         <span class="icon-mang-xa-hoi">
                             <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor">
-                                <path
-                                    d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z" />
+                                <path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/>
                             </svg>
                         </span>
                         <span>Facebook</span>
                     </a>
-                    <a href="https://www.instagram.com/f0rrest_gump_" target="_blank" rel="noopener noreferrer"
-                        class="link-mang-xa-hoi link-instagram">
+                    <a href="https://www.instagram.com/f0rrest_gump_" target="_blank" rel="noopener noreferrer" class="link-mang-xa-hoi link-instagram">
                         <span class="icon-mang-xa-hoi">
                             <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor">
-                                <path
-                                    d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z" />
+                                <path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/>
                             </svg>
                         </span>
                         <span>Instagram</span>
                     </a>
-                    <a href="https://zalo.me/0973543904" target="_blank" rel="noopener noreferrer"
-                        class="link-mang-xa-hoi link-zalo">
+                    <a href="https://zalo.me/0973543904" target="_blank" rel="noopener noreferrer" class="link-mang-xa-hoi link-zalo">
                         <span class="icon-mang-xa-hoi">
                             <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 40 40" width="40" height="40">
-                                <!-- Nền xanh giống Facebook -->
-                                <rect width="40" height="40" rx="8" fill="#1877F2" />
-
-                                <!-- Chữ Zalo -->
-                                <text x="20" y="28" font-family="Arial, Helvetica, sans-serif" font-size="14"
-                                    font-weight="bold" fill="white" text-anchor="middle"
-                                    letter-spacing="0.5">Zalo</text>
+                                <rect width="40" height="40" rx="8" fill="#0180CF"/>
+                                <text x="20" y="28" font-family="Arial, Helvetica, sans-serif" font-size="14" font-weight="bold" fill="white" text-anchor="middle" letter-spacing="0.5">Zalo</text>
                             </svg>
-
                         </span>
                         <span>Zalo</span>
                     </a>
                     <a href="mailto:kyfanstore@gmail.com" class="link-mang-xa-hoi link-email">
                         <span class="icon-mang-xa-hoi">
                             <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor">
-                                <path
-                                    d="M24 5.457v13.909c0 .904-.732 1.636-1.636 1.636h-3.819V11.73L12 16.64l-6.545-4.91v9.273H1.636A1.636 1.636 0 0 1 0 19.366V5.457c0-2.023 2.309-3.178 3.927-1.964L12 9.818l8.073-6.325c1.618-1.214 3.927-.059 3.927 1.964z" />
+                                <path d="M24 5.457v13.909c0 .904-.732 1.636-1.636 1.636h-3.819V11.73L12 16.64l-6.545-4.91v9.273H1.636A1.636 1.636 0 0 1 0 19.366V5.457c0-2.023 2.309-3.178 3.927-1.964L12 9.818l8.073-6.325c1.618-1.214 3.927-.059 3.927 1.964z"/>
                             </svg>
                         </span>
                         <span>kyfanstore@gmail.com</span>
                     </a>
                 </div>
             </div>
-            <div class="ban-quyen">© 2026 Bản quyền thuộc về Trần Quang Đệ.<br> MỖI NGÀY MỘT TÁCH TRÀ, Dưỡng cho Thân An
-                -
-                Dưỡng cho Tâm Sáng.
-            </div>
+            <div class="ban-quyen">© 2026 Bản quyền thuộc về Trần Quang Đệ.<br> MỖI NGÀY MỘT TÁCH TRÀ, Dưỡng cho Thân An - Dưỡng cho Tâm Sáng.</div>
         </footer>
     </div>
 
-    <!-- CỬA SỔ CHI TIẾT -->
+    <!-- MODAL GIỎ HÀNG -->
+    <div class="modal-gio-hang" id="modalGioHang">
+        <div class="modal-gio-hang-noi-dung">
+            <div class="modal-gio-hang-header">
+                <h3>🛒 Giỏ Hàng Của Bạn</h3>
+                <span class="modal-gio-hang-dong" id="dongGioHang">&times;</span>
+            </div>
+            <div class="modal-gio-hang-body" id="danhSachGioHang"></div>
+            <div class="modal-gio-hang-footer">
+                <div class="tong-tien">
+                    <span>Tạm tính:</span>
+                    <span id="tongTienGioHang">0₫</span>
+                </div>
+                <button class="nut-thanh-toan" id="nutThanhToan">
+                    <span>💳</span> Tiến Hành Thanh Toán
+                </button>
+            </div>
+        </div>
+    </div>
+
+    <!-- MODAL THANH TOÁN (CHECKOUT) -->
+    <div class="modal-thanh-toan" id="modalThanhToan">
+        <div class="modal-thanh-toan-noi-dung">
+            <div class="modal-thanh-toan-header">
+                <h3>💳 Thanh Toán Đơn Hàng</h3>
+                <span class="modal-thanh-toan-dong" id="dongThanhToan">&times;</span>
+            </div>
+            <div class="modal-thanh-toan-body">
+                <!-- Tiến trình -->
+                <div class="checkout-steps">
+                    <div class="step active" data-step="1">1. Giỏ hàng</div>
+                    <div class="step" data-step="2">2. Vận chuyển</div>
+                    <div class="step" data-step="3">3. Thanh toán</div>
+                </div>
+
+                <!-- STEP 1: Giỏ hàng & Voucher -->
+                <div class="checkout-step-content" id="step1Content">
+                    <div class="tom-tat-don-hang-checkout" id="tomTatDonHangCheckout"></div>
+                    
+                    <!-- Voucher -->
+                    <div class="voucher-section">
+                        <label>🎫 Mã giảm giá / Voucher</label>
+                        <div class="voucher-input-group">
+                            <input type="text" id="maVoucher" placeholder="Nhập mã voucher" class="voucher-input">
+                            <button type="button" id="apDungVoucher" class="nut-ap-dung-voucher">Áp dụng</button>
+                        </div>
+                        <div id="voucherThongBao" class="voucher-thong-bao"></div>
+                        <div class="voucher-goi-y">
+                            <span>Mã có thể dùng:</span>
+                            <span class="voucher-tag" data-code="KYFAN10">KYFAN10 (-10%)</span>
+                            <span class="voucher-tag" data-code="FREESHIP">FREESHIP (Miễn phí vận chuyển)</span>
+                            <span class="voucher-tag" data-code="WELCOME20">WELCOME20 (-20k)</span>
+                        </div>
+                    </div>
+
+                    <button class="nut-tiep-tuc" id="nutTiepTucStep1">Tiếp tục →</button>
+                </div>
+
+                <!-- STEP 2: Thông tin giao hàng -->
+                <div class="checkout-step-content" id="step2Content" style="display: none;">
+                    <form id="formGiaoHang">
+                        <div class="form-group">
+                            <label>Họ và tên *</label>
+                            <input type="text" id="hoTen" placeholder="Nguyễn Văn A" required>
+                        </div>
+                        <div class="form-group">
+                            <label>Số điện thoại *</label>
+                            <input type="tel" id="soDienThoai" placeholder="0901234567" required>
+                        </div>
+                        <div class="form-group">
+                            <label>Email (để nhận hóa đơn)</label>
+                            <input type="email" id="email" placeholder="email@example.com">
+                        </div>
+                        
+                        <!-- Hình thức nhận hàng -->
+                        <div class="form-group">
+                            <label>Hình thức nhận hàng *</label>
+                            <div class="hinh-thuc-nhan-hang">
+                                <label class="radio-label">
+                                    <input type="radio" name="deliveryType" value="ship" checked> Giao hàng tận nơi (Ship)
+                                </label>
+                                <label class="radio-label">
+                                    <input type="radio" name="deliveryType" value="pickup"> Nhận tại cửa hàng
+                                </label>
+                            </div>
+                        </div>
+
+                        <!-- Địa chỉ giao hàng (hiện khi chọn ship) -->
+                        <div id="diaChiGiaoHangGroup">
+                            <div class="form-group">
+                                <label>Tỉnh/Thành phố *</label>
+                                <select id="tinhThanh" required>
+                                    <option value="">Chọn Tỉnh/Thành phố</option>
+                                    <option value="hanoi" data-ship="30000">Hà Nội</option>
+                                    <option value="hcm" data-ship="50000">TP. Hồ Chí Minh</option>
+                                    <option value="danang" data-ship="40000">Đà Nẵng</option>
+                                    <option value="other" data-ship="60000">Tỉnh/Thành khác</option>
+                                </select>
+                            </div>
+                            <div class="form-group">
+                                <label>Quận/Huyện *</label>
+                                <select id="quanHuyen" required>
+                                    <option value="">Chọn Quận/Huyện</option>
+                                </select>
+                            </div>
+                            <div class="form-group">
+                                <label>Địa chỉ chi tiết *</label>
+                                <textarea id="diaChi" placeholder="Số nhà, tên đường..." rows="2" required></textarea>
+                            </div>
+                        </div>
+
+                        <!-- Địa chỉ cửa hàng (hiện khi chọn pickup) -->
+                        <div id="diaChiCuaHangGroup" style="display: none;">
+                            <div class="dia-chi-cua-hang">
+                                <p><strong>📍 KYFAN Store</strong></p>
+                                <p>294 Đường Nguyễn Trãi, Phường Đại Mỗ, Nam Từ Liêm, Hà Nội</p>
+                                <p>⏰ Giờ mở cửa: 8:00 - 21:00 (Tất cả các ngày trong tuần)</p>
+                            </div>
+                        </div>
+
+                        <div class="form-group">
+                            <label>Ghi chú</label>
+                            <textarea id="ghiChu" placeholder="Ghi chú về đơn hàng..." rows="2"></textarea>
+                        </div>
+                    </form>
+
+                    <div class="checkout-navigation">
+                        <button class="nut-quay-lai" id="nutQuayLaiStep2">← Quay lại</button>
+                        <button class="nut-tiep-tuc" id="nutTiepTucStep2">Tiếp tục →</button>
+                    </div>
+                </div>
+
+                <!-- STEP 3: Thanh toán -->
+                <div class="checkout-step-content" id="step3Content" style="display: none;">
+                    <!-- Tổng kết đơn hàng -->
+                    <div class="order-summary-final" id="orderSummaryFinal"></div>
+
+                    <!-- Phương thức thanh toán -->
+                    <div class="form-group">
+                        <label>Phương thức thanh toán *</label>
+                        <div class="phuong-thuc-thanh-toan-grid">
+                            <label class="payment-method-card">
+                                <input type="radio" name="paymentMethod" value="cod" checked>
+                                <div class="payment-icon">💵</div>
+                                <div class="payment-name">COD</div>
+                                <div class="payment-desc">Thanh toán khi nhận hàng</div>
+                            </label>
+                            <label class="payment-method-card">
+                                <input type="radio" name="paymentMethod" value="bank">
+                                <div class="payment-icon">🏦</div>
+                                <div class="payment-name">Chuyển khoản</div>
+                                <div class="payment-desc">Qua ngân hàng</div>
+                            </label>
+                            <label class="payment-method-card">
+                                <input type="radio" name="paymentMethod" value="momo">
+                                <div class="payment-icon">📱</div>
+                                <div class="payment-name">Ví MoMo</div>
+                                <div class="payment-desc">Thanh toán qua ví</div>
+                            </label>
+                            <label class="payment-method-card">
+                                <input type="radio" name="paymentMethod" value="vnpay">
+                                <div class="payment-icon">🔐</div>
+                                <div class="payment-name">VNPAY</div>
+                                <div class="payment-desc">Cổng thanh toán</div>
+                            </label>
+                        </div>
+                    </div>
+
+                    <!-- Thông tin chuyển khoản -->
+                    <div id="bankTransferInfo" class="bank-transfer-info" style="display: none;">
+                        <h4>🏦 Thông tin chuyển khoản</h4>
+                        <p><strong>Ngân hàng:</strong> Vietcombank - Chi nhánh Hà Nội</p>
+                        <p><strong>Số tài khoản:</strong> 1234567890</p>
+                        <p><strong>Chủ tài khoản:</strong> TRAN QUANG DE</p>
+                        <p><strong>Nội dung CK:</strong> <span id="ckContent">KYFAN [SĐT]</span></p>
+                        <button type="button" class="nut-copy-ck" onclick="copyCKContent()">📋 Sao chép nội dung CK</button>
+                    </div>
+
+                    <!-- MoMo QR -->
+                    <div id="momoQRInfo" class="momo-qr-info" style="display: none;">
+                        <h4>📱 Quét mã QR MoMo để thanh toán</h4>
+                        <div class="qr-placeholder">
+                            <svg width="150" height="150" viewBox="0 0 150 150">
+                                <rect width="150" height="150" fill="#fff"/>
+                                <!-- QR Code pattern giả lập -->
+                                <rect x="20" y="20" width="30" height="30" fill="#000"/>
+                                <rect x="60" y="20" width="60" height="30" fill="#000"/>
+                                <rect x="20" y="60" width="30" height="60" fill="#000"/>
+                                <rect x="100" y="60" width="30" height="60" fill="#000"/>
+                                <rect x="60" y="100" width="60" height="30" fill="#000"/>
+                            </svg>
+                        </div>
+                        <p>Số tiền: <strong id="momoAmount">0₫</strong></p>
+                        <p>Nội dung: <strong>KYFAN [SĐT]</strong></p>
+                    </div>
+
+                    <!-- VNPAY Info -->
+                    <div id="vnpayInfo" class="vnpay-info" style="display: none;">
+                        <h4>🔐 Thanh toán qua VNPAY</h4>
+                        <p>Bạn sẽ được chuyển đến cổng thanh toán VNPAY an toàn.</p>
+                        <button type="button" class="nut-vnpay">Thanh toán qua VNPAY</button>
+                    </div>
+
+                    <div class="checkout-navigation">
+                        <button class="nut-quay-lai" id="nutQuayLaiStep3">← Quay lại</button>
+                        <button class="nut-xac-nhan-dat-hang" id="nutXacNhanDatHang">
+                            <span>✅</span> Xác Nhận Đặt Hàng
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- MODAL THÔNG BÁO THÀNH CÔNG -->
+    <div class="modal-thong-bao" id="modalThongBao">
+        <div class="modal-thong-bao-noi-dung">
+            <div class="thong-bao-icon" id="thongBaoIcon">✅</div>
+            <h3 id="thongBaoTieuDe">Đặt hàng thành công!</h3>
+            <p id="thongBaoNoiDung">Cảm ơn bạn đã mua hàng tại KYFAN.</p>
+            <button class="nut-dong-thong-bao" id="dongThongBao">Đóng</button>
+        </div>
+    </div>
+
+    <!-- MODAL CHI TIẾT SẢN PHẨM -->
     <div id="cuaSoSanPham" class="cua-so">
         <div class="noi-dung-cua-so">
             <span class="nut-dong">&times;</span>
             <div class="luoi-cua-so">
                 <div>
                     <img id="anhCuaSo" class="anh-cua-so" src="https://picsum.photos/500/500?random=999" alt="Sản phẩm">
-                    <div id="thanhPhanCuaSo"
-                        style="display: flex; gap: 12px; margin-top: 20px; flex-wrap: wrap; justify-content: center;">
-                    </div>
+                    <div id="thanhPhanCuaSo" style="display: flex; gap: 12px; margin-top: 20px; flex-wrap: wrap; justify-content: center;"></div>
                 </div>
                 <div>
                     <h2 class="tieu-de-cua-so" id="tieuDeCuaSo"></h2>
                     <p id="moTaCuaSo" class="mo-ta-cua-so"></p>
-                    <iframe id="videoCuaSo" class="video-cua-so" src="https://www.youtube.com/embed/dQw4w9WgXcQ"
-                        allowfullscreen></iframe>
-                    <p style="font-weight: 500; margin-top: 10px;"><strong>🍵 Cách pha:</strong> <span
-                            id="cachPha"></span></p>
+                    <iframe id="videoCuaSo" class="video-cua-so" src="https://www.youtube.com/embed/dQw4w9WgXcQ" allowfullscreen></iframe>
+                    <p style="font-weight: 500; margin-top: 10px;"><strong>🍵 Cách pha:</strong> <span id="cachPha"></span></p>
                     <div class="hop-danh-gia-cua-so">
                         <div class="tieu-de-danh-gia-cua-so">✦ Đánh Giá Từ Khách Hàng</div>
                         <div id="danhSachDanhGiaCuaSo"></div>
@@ -420,5 +610,4 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
     <script src="script.js"></script>
 </body>
-
 </html>
